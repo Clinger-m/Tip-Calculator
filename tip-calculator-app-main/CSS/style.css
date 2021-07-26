@@ -1,0 +1,202 @@
+/*============= RESET CSS =============*/
+* {
+    margin    : 0;
+    padding   : 0;
+    box-sizing: border-box;
+}
+
+
+/*============= VARIÁVEIS CSS =============*/
+:root {
+    --strong-cyan         : hsl(172, 67%, 45%);
+    --very-dark-cyan      : hsl(183, 100%, 15%);
+    --darker-grayish-cyan : hsl(186, 14%, 43%);
+    --dark-grayish-cyan   : hsl(184, 14%, 56%);
+    --light-grayish-cyan  : hsl(185, 41%, 84%);
+    --lighter-grayish-cyan: hsl(189, 41%, 97%);
+    --white               : hsl(0, 0%, 100%);
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    background: var(--light-grayish-cyan)
+}
+
+li {
+    list-style: none;
+}
+
+/*============= LAYOUT =============*/
+
+.container {
+    display      : flex;
+    position     : relative;
+    background   : var(--white);
+    width        : 50rem;
+    height       : 25rem;
+    border-radius: 1.5rem;
+    margin       : 0 auto;
+    top          : 10.625rem;
+    padding      : 1.25rem;
+}
+
+.container__form {    
+    margin-right : 1rem;   
+}
+
+.container__res { 
+    background-color: var(--very-dark-cyan);
+}
+
+.container__res,
+.container__form {
+    display         : flex;
+    flex-direction  : column;
+    justify-content : space-between;    
+    width           : 50%;
+    height          : 100%;
+    border-radius   : 1rem;
+    padding         : 2.18rem;
+}
+
+.btn__reset {
+    background-color: var(--strong-cyan);
+    padding         : .625rem 8rem;
+    border-radius   : .3rem;
+    font-family: 'Space Mono', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--very-dark-cyan);
+    transition: .3s;
+}
+
+.btn__reset:hover,
+.grid a:hover {
+    background-color: hsl(172, 93%, 47%);
+}
+
+.tip__amount,
+.total {
+    display        : flex;
+    align-items    : center;
+    justify-content: space-between;
+}
+
+.tip__amount {
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+.p__principal {
+    font-family: 'Space Mono', sans-serif;
+    font-weight: 500;
+    font-size: 0.90rem;
+    color: var(--white);
+    margin-top: 9px;
+}
+
+.p__secundario {
+    font-family: 'Space Mono', sans-serif;
+    font-weight: 700;
+    font-size: 0.90rem;
+    color: var(--dark-grayish-cyan)
+}
+
+#tip__amount-res,
+#total-res {
+    color: var(--strong-cyan);
+    font-family: 'Space Mono', sans-serif;
+    font-weight: 700;
+    font-size: 2.5rem;
+}
+
+.bill p,
+.number__people p,
+.select__tip p {    
+    font-family: 'Space Mono', sans-serif;
+    font-weight: 700;
+    font-size: 0.80rem;
+    color: var(--darker-grayish-cyan);
+    margin-bottom: 7px;
+}
+
+.bill i {
+    position: absolute;
+    padding: 9px;
+    color: var(--darker-grayish-cyan);
+    font-family: 'Space Mono', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.bill input,
+.number__people input {
+    outline: none;
+    border: 1px solid rgba(255, 255, 255, 0);
+    background-color: var(--lighter-grayish-cyan);
+    width: 100%;
+    height: 40px;
+    border-radius   : .3rem;
+    font-family: 'Space Mono', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--very-dark-cyan);
+    text-align: right;    
+}
+
+.select__tip {
+    margin-top: 30px;
+    margin-bottom: 60px;
+}
+
+.grid {
+    display         : flex;
+    flex-wrap: wrap;
+    justify-content : space-between;  
+    
+}
+.grid input {
+    width: 90px;
+    height: 35px;
+    font-family: 'Space Mono', sans-serif;
+    font-weight: 700;
+    
+    background-color: var(--lighter-grayish-cyan);
+    outline: none;
+    text-align: center; 
+    border-radius   : .3rem;
+    border: 1px solid rgba(255, 255, 255, 0);   
+    
+}
+
+::-webkit-input-placeholder{ /*mudando a cor do placeholder*/
+    color: var(--darker-grayish-cyan);
+    
+  }
+
+.grid a {
+    background-color: var(--very-dark-cyan);
+    color: var(--white);
+    font-family: 'Space Mono', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 5px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+    width: 90px;
+    text-align: center;
+    border-radius: .3rem;
+    transition: .3s;
+}
+
+.number__people i {
+    position: absolute;
+    padding: 9px;
+    color: var(--darker-grayish-cyan);
+    font-family: 'Space Mono', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+}
