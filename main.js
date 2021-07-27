@@ -85,8 +85,8 @@ function calcular() {
 
     if (checked == 5) {
 
-        calculoTip = ((billValue.value * cinco)) / people.value
-        calculoTotal = ((parseFloat(billValue.value) * cinco) + parseFloat(billValue.value)) / parseFloat(people.value)
+        calculoTip = ((billValue.value * cinco.value)) / people.value
+        calculoTotal = ((parseFloat(billValue.value) * cinco.value) + parseFloat(billValue.value)) / parseFloat(people.value)
         resTip.innerHTML = '$' + calculoTip.toFixed(2)
         resTotal.innerHTML = '$' + calculoTotal.toFixed(2)
         custom.disabled = true
@@ -97,8 +97,8 @@ function calcular() {
     } else if (checked == 10) {
 
         
-        calculoTip = ((billValue.value * dez)) / people.value
-        calculoTotal = ((parseFloat(billValue.value) * dez) + parseFloat(billValue.value)) / parseFloat(people.value)
+        calculoTip = ((billValue.value * dez.value)) / people.value
+        calculoTotal = ((parseFloat(billValue.value) * dez.value) + parseFloat(billValue.value)) / parseFloat(people.value)
         resTip.innerHTML = '$' + calculoTip.toFixed(2)
         resTotal.innerHTML = '$' + calculoTotal.toFixed(2)
         custom.disabled = true
@@ -107,8 +107,8 @@ function calcular() {
     } else if (checked == 15) {
 
        
-        calculoTip = ((billValue.value * quinze)) / people.value
-        calculoTotal = ((parseFloat(billValue.value) * quinze) + parseFloat(billValue.value)) / parseFloat(people.value)
+        calculoTip = ((billValue.value * quinze.value)) / people.value
+        calculoTotal = ((parseFloat(billValue.value) * quinze.value) + parseFloat(billValue.value)) / parseFloat(people.value)
         resTip.innerHTML = '$' + calculoTip.toFixed(2)
         resTotal.innerHTML = '$' + calculoTotal.toFixed(2)
         custom.disabled = true
@@ -117,8 +117,8 @@ function calcular() {
     } else if (checked == 25) {
 
         
-        calculoTip = ((billValue.value * vCinco)) / people.value
-        calculoTotal = ((parseFloat(billValue.value) * vCinco) + parseFloat(billValue.value)) / parseFloat(people.value)
+        calculoTip = ((billValue.value * vCinco.value)) / people.value
+        calculoTotal = ((parseFloat(billValue.value) * vCinco.value) + parseFloat(billValue.value)) / parseFloat(people.value)
         resTip.innerHTML = '$' + calculoTip.toFixed(2)
         resTotal.innerHTML = '$' + calculoTotal.toFixed(2)
         custom.disabled = true
@@ -127,8 +127,8 @@ function calcular() {
     } else if (checked == 50) {
 
         
-        calculoTip = ((billValue.value * cinquenta)) / people.value
-        calculoTotal = ((parseFloat(billValue.value) * cinquenta) + parseFloat(billValue.value)) / parseFloat(people.value)
+        calculoTip = ((billValue.value * cinquenta.value)) / people.value
+        calculoTotal = ((parseFloat(billValue.value) * cinquenta.value) + parseFloat(billValue.value)) / parseFloat(people.value)
         resTip.innerHTML = '$' + calculoTip.toFixed(2)
         resTotal.innerHTML = '$' + calculoTotal.toFixed(2)
         custom.disabled = true
@@ -175,5 +175,6 @@ function limpaCores(){
     dez.classList.remove('clicked__color')
     quinze.classList.remove('clicked__color')
     vCinco.classList.remove('clicked__color')
-    cinquenta.classList.remove('clicked__color')    
+    cinquenta.classList.remove('clicked__color')  
+
 }
