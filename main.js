@@ -16,29 +16,60 @@ let vCinco = document.getElementById('25-porcento')
 let cinquenta = document.getElementById('50-porcento')
 
 cinco.addEventListener('click', function () {
+    //remove classe para mudar cor
+    limpaCores()
+    //add classe para mudar cor
+    cinco.classList.add('clicked__color')
+
     checked = 5
-    cinco = 5 / 100
+    cinco.value = 5 / 100   
 })
+
 dez.addEventListener('click', function () {
+    //remove classe para mudar cor
+    limpaCores()
+    //add classe para mudar cor
+    dez.classList.add('clicked__color')   
+
     checked = 10
-    dez = 10 / 100
+    dez.value = 10 / 100    
 })
+
 quinze.addEventListener('click', function () {
+    //remove classe para mudar cor
+    limpaCores()
+    //add classe para mudar cor
+    quinze.classList.add('clicked__color')
+
     checked = 15
-    quinze = 15 / 100
+    quinze.value = 15 / 100
 })
+
 vCinco.addEventListener('click', function () {
+    //remove classe para mudar cor
+    limpaCores()
+    //add classe para mudar cor
+    vCinco.classList.add('clicked__color')   
+    
     checked = 25
-    vCinco = 25 / 100
+    vCinco.value = 25 / 100
 })
+
 cinquenta.addEventListener('click', function () {
+    //remove classe para mudar cor
+    limpaCores()
+    //add classe para mudar cor
+    cinquenta.classList.add('clicked__color')   
+    
     checked = 50
-    cinquenta = 50 / 100
+    cinquenta.value = 50 / 100
 })
 
 
 // pega o valor do input custom
 let custom = document.getElementById('custom')
+
+custom.addEventListener('click', limpaCores)
 
 // pega o botão reset
 const reset = document.getElementById('btn__reset')
@@ -60,10 +91,12 @@ function calcular() {
         resTotal.innerHTML = '$' + calculoTotal.toFixed(2)
         custom.disabled = true
         custom.value = ''
+        
+        
 
     } else if (checked == 10) {
 
-        console.log("ENTROU 10")
+        
         calculoTip = ((billValue.value * dez)) / people.value
         calculoTotal = ((parseFloat(billValue.value) * dez) + parseFloat(billValue.value)) / parseFloat(people.value)
         resTip.innerHTML = '$' + calculoTip.toFixed(2)
@@ -73,7 +106,7 @@ function calcular() {
 
     } else if (checked == 15) {
 
-        console.log("ENTROU 15")
+       
         calculoTip = ((billValue.value * quinze)) / people.value
         calculoTotal = ((parseFloat(billValue.value) * quinze) + parseFloat(billValue.value)) / parseFloat(people.value)
         resTip.innerHTML = '$' + calculoTip.toFixed(2)
@@ -83,7 +116,7 @@ function calcular() {
 
     } else if (checked == 25) {
 
-        console.log("ENTROU 25")
+        
         calculoTip = ((billValue.value * vCinco)) / people.value
         calculoTotal = ((parseFloat(billValue.value) * vCinco) + parseFloat(billValue.value)) / parseFloat(people.value)
         resTip.innerHTML = '$' + calculoTip.toFixed(2)
@@ -93,7 +126,7 @@ function calcular() {
 
     } else if (checked == 50) {
 
-        console.log("ENTROU 50")
+        
         calculoTip = ((billValue.value * cinquenta)) / people.value
         calculoTotal = ((parseFloat(billValue.value) * cinquenta) + parseFloat(billValue.value)) / parseFloat(people.value)
         resTip.innerHTML = '$' + calculoTip.toFixed(2)
@@ -103,7 +136,7 @@ function calcular() {
     }
     else {
 
-        console.log("ENTROU ELSE")
+        
         calculoTip = ((billValue.value * custom.value) / 100) / people.value
         calculoTotal = ((parseFloat(billValue.value) * percent) + parseFloat(billValue.value)) / parseFloat(people.value)
         resTip.innerHTML = '$' + calculoTip.toFixed(2)
@@ -122,19 +155,25 @@ function limpar() {
     resTotal.innerHTML = '$' + 0
     checked = 0
     custom.disabled = false
-
+    limpaCores()
 }
-
-
 
 // função para verificar se os dados estão nulos ou negativos
 function verificaErro(){
     if (people.value <= 0 || billValue.value <= 0) {
-        alert('Valor dos campos devem ser maior 0')
+        alert('Os valores dos campos devem ser maior 0')
         limpar()   
     }
     if (custom.value < 0) {
         alert('Valor da porcentagem deve ser maior que 0')
         limpar()
     }
+}
+
+function limpaCores(){
+    cinco.classList.remove('clicked__color')
+    dez.classList.remove('clicked__color')
+    quinze.classList.remove('clicked__color')
+    vCinco.classList.remove('clicked__color')
+    cinquenta.classList.remove('clicked__color')    
 }
